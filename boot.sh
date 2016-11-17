@@ -13,6 +13,10 @@ export NVM_DIR="$HOME/.nvm" && (
 
 echo '3-Installing node'
 nvm install node
+nvm use node
 
 echo '4-Upgrading npm to latest'
 npm install -g npm
+
+echo '5-Install'
+node install.js 
