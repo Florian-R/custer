@@ -1,0 +1,28 @@
+{
+  "name": "custer",
+  "version": "0.0.1",
+  "description": "Scripts and configs for Jessie",
+  "main": "install.js",
+  "scripts": {
+    "start": "npm install && node install.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Florian-R/custer.git"
+  },
+  "keywords": [
+    "debian",
+    "jessie",
+    "dotfiles"
+  ],
+  "author": "Florian-R",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Florian-R/custer/issues"
+  },
+  "homepage": "https://github.com/Florian-R/custer#readme",
+  "dependencies": {
+    "fs-symlink": "^1.2.1"
+  }
+}

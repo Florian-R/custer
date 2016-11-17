@@ -19,4 +19,4 @@ echo '4-Upgrading npm to latest'
 npm install -g npm
 
 echo '5-Install'
-node install.js 
+npm start 
