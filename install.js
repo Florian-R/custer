@@ -8,7 +8,7 @@ const os = require('os');
 const aptInstall = require('./tasks/apt-install')
 const cleanup = require('./tasks/cleanup')
 
-aptInstall({dry: true})
+aptInstall()
   .then(cleanup)
   .then((result) => console.log({result}))
   .catch((error) => console.log({error}))
