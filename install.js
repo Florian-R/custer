@@ -1,23 +1,29 @@
 #!/usr/bin/env node
 
+'use strict';
+
 const fs = require('fs');
 const os = require('os');
-const home = os.homedir();
+
+const aptInstall = require('./tasks/apt-install')
+const cleanup = require('./tasks/cleanup')
+
+aptInstall({dry: true})
+  .then(cleanup)
+  .then((result) => console.log({result}))
+  .catch((error) => console.log({error}))
+
+
+
+
+/*
+//const home = os.homedir();
 // const del = require('del');
 // console.log({del})
-
 const symlink = require('fs-symlink');
 const exec = require('child_process').exec;
 
-sourceBashrc = function () {
-  exec('. ~/.bashrc', function (error, stdout, stderr) {
-    if (error) {
-      console.log({error, stdout, stderr});
-    }
-  })
-}
-
-symlink('./dotfiles/.bashrc', home + '/.bashrc').then(sourceBashrc)
+symlink('./dotfiles/.bashrc', home + '/.bashrc')
   .catch(function(error) {
     console.log({error})
-  });
+  });*/

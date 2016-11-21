@@ -20,3 +20,6 @@ npm install -g npm
 
 echo '5-Install'
 npm start 
+
+echo '6-Quit'
+sudo reboot
