@@ -1,4 +1,4 @@
-const exec = require('child-process-promise').exec;
+const spawn = require('child-process-promise').spawn;
 
 // TODO: Split this in a conf, for self documenting
 const packages = [
@@ -35,12 +35,23 @@ const packages = [
 ]
 
 
+const logData = data => console.log(data.toString());
+
+
 module.exports = (options = {}) => {
-  let command = 'sudo apt-get install -y ' + packages.join(' ');
+  let args = ['apt-get', 'install', '-y'].concat(packages);
 
   if (options.dry) {
-     command += ' --dry-run';
+     args.push('--dry-run');
   }
 
-  return exec(command);
+  const promise = spawn('sudo', args);
+
+  const {childProcess} = promise;
+
+  childProcess.stdout.on('data', logData);
+
+  childProcess.stderr.on('data', logData);
+
+  return promise;
 }
