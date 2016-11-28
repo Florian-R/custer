@@ -29,6 +29,7 @@ const packages = [
 
   // Utils
   'locate',
+  'deborphan',
 
   // Killall and friends
   'psmisc'

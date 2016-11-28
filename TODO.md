@@ -1,7 +1,7 @@
 * standart
 * source .bashrc
 * tests
-* Cleanup deps
+* Cleanup deps -> all with fs-extra-promise
 * Nice output
 * Nicer error log
 * editor config

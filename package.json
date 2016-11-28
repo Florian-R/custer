@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Florian-R/custer#readme",
   "dependencies": {
     "child-process-promise": "^2.2.0",
+    "fs-extra-promise": "^0.4.1",
     "fs-symlink": "1.2.1"
   }
 }
