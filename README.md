@@ -15,7 +15,7 @@ adduser USER_NAME sudo
 exit
 ```
 
-## Fire!
+## Go!
 
 ```bash
 cd ~
